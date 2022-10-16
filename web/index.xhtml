@@ -1,12 +1,403 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
     <h:head>
-        <title>Facelet Title</title>
+        <meta charset="UTF-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+        <title>Fast Food </title>
+
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+
+
+        <link rel="stylesheet" href="css/style.css"></link>
     </h:head>
     <h:body>
-        Hello from Facelets
+        <b:navBar brand="LoveAppetite" brandHref="#" inverse="true">
+            <b:navbarLinks>
+                <b:navLink value="Home" href="#"></b:navLink>
+                <b:navLink value="Speciality" href="#"></b:navLink>
+                <b:navLink value="Popular" href="#"></b:navLink>
+                <b:navLink value="Gallery" href="#"></b:navLink>
+                <b:navLink value="Review" href="#"></b:navLink>
+                <b:navLink value="Order" href="#"></b:navLink>
+            </b:navbarLinks>
+        </b:navBar>
+        
+        <section class="home" id="home">
+
+            <div class="content">
+                <h3>food made with love</h3>
+                <p>there is no sincerer love than the love of food!</p>
+                <a href="#order" class="btn">order now</a>
+            </div>
+
+            <div class="image">
+                <img src="images/home-img.png" alt=""></img>
+            </div>
+
+        </section>    
+        
+        <section class="speciality" id="speciality">
+
+            <h1 class="heading"> our <span>speciality</span> </h1>
+
+            <div class="box-container">
+
+                <div class="box">
+                    <img class="image" src="images/s-img-1.jpg" alt=""></img>
+                    <div class="content">
+                        <img src="images/s-1.png" alt=""></img>
+                        <h3>tasty burger</h3>
+                        <p>Delicious Burger with high quality meat,bun,veggies.</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img class="image" src="images/s-img-2.jpg" alt=""></img>
+                    <div class="content">
+                        <img src="images/s-2.png" alt=""></img>
+                        <h3>tasty pizza</h3>
+                        <p>a dish made typically of flattened bread dough spread with a savory mixture usually including tomatoes and cheese and often other toppings and baked.</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img class="image" src="images/s-img-3.jpg" alt=""></img>
+                    <div class="content">
+                        <img src="images/s-3.png" alt=""></img>
+                        <h3>cold ice-cream</h3>
+                        <p>A rich, sweet, creamy frozen food made from variously flavored cream and milk products churned or stirred to a smooth consistency during the freezing process and often containing gelatin, eggs, fruits, nuts, etc.
+                            </p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img class="image" src="images/s-img-4.jpg" alt=""></img>
+                    <div class="content">
+                        <img src="images/s-4.png" alt=""></img>
+                        <h3>cold drinks</h3>
+                        <p>a beverage that is chilled. Chiefly Southern U.S. soft drink.</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img class="image" src="images/s-img-5.jpg" alt=""></img>
+                    <div class="content">
+                        <img src="images/s-5.png" alt=""></img>
+                        <h3>tasty sweets</h3>
+                        <p> So sweet is that sugary flavor that you have in your mouth when you eat something that has, I don't know, natural sweet flavors I guess.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        
+        <section class="popular" id="popular">
+
+            <h1 class="heading"> most <span>popular</span> foods </h1>
+
+            <div class="box-container">
+
+                <div class="box">
+                    <span class="price"> $5 - $20 </span>
+                    <img src="images/p-1.jpg" alt=""></img>
+                    <h3>tasty burger</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <a href="#order" class="btn">order now</a>
+                </div>
+                <div class="box">
+                    <span class="price"> $5 - $20 </span>
+                    <img src="images/p-2.jpg" alt=""></img>
+                    <h3>tasty cakes</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <a href="#order" class="btn">order now</a>
+                </div>
+                <div class="box">
+                    <span class="price"> $5 - $20 </span>
+                    <img src="images/p-5.jpg" alt=""></img>
+                    <h3>cold drinks</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <a href="#order" class="btn">order now</a>
+                </div>
+                <div class="box">
+                    <span class="price"> $5 - $20 </span>
+                    <img src="images/p-6.jpg" alt=""></img>
+                    <h3>cold ice-cream</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <a href="#order" class="btn">order now</a>
+                </div>
+
+            </div>
+
+        </section>
+        
+        <div class="step-container">
+
+            <h1 class="heading">how it <span>works</span></h1>
+
+            <section class="steps">
+
+                <div class="box">
+                    <img src="images/step-1.jpg" alt=""></img>
+                    <h3>choose your favorite food</h3>
+                </div>
+                <div class="box">
+                    <img src="images/step-2.jpg" alt=""></img>
+                    <h3>free and fast delivery</h3>
+                </div>
+                <div class="box">
+                    <img src="images/step-3.jpg" alt=""></img>
+                    <h3>easy payments methods</h3>
+                </div>
+                <div class="box">
+                    <img src="images/step-4.jpg" alt=""></img>
+                    <h3>and finally, enjoy your food</h3>
+                </div>
+
+            </section>
+
+        </div>
+        
+        <section class="gallery" id="gallery">
+
+            <h1 class="heading"> our food <span> gallery </span> </h1>
+
+            <div class="box-container">
+
+                <div class="box">
+                    <img src="images/g-1.jpg" alt=""></img>
+                    <div class="content">
+                        <h3>tasty Burger</h3>
+                        <p>Classic American Burger.</p>
+                        <a href="#order" class="btn">order now</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="images/g-2.jpg" alt=""></img>
+                    <div class="content">
+                        <h3>tasty Burger</h3>
+                        <p>M.C Burger Krapow</p>
+                        <a href="#order" class="btn">order now</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="images/g-3.jpg" alt=""></img>
+                    <div class="content">
+                        <h3>tasty Burger</h3>
+                        <p>Danish Hotdogs.</p>
+                        <a href="#order" class="btn">order now</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="images/g-4.jpg" alt=""></img>
+                    <div class="content">
+                        <h3>tasty Burger</h3>
+                        <p>Kraut Seattle Hotdogs</p>
+                        <a href="#order" class="btn">order now</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="images/g-5.jpg" alt=""></img>
+                    <div class="content">
+                        <h3>tasty Pizza</h3>
+                        <p>Meatzza Carbonara Cheesy Bites</p>
+                        <a href="#order" class="btn">order now</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="images/g-6.jpg" alt=""></img>
+                    <div class="content">
+                        <h3>tasty Pizza</h3>
+                        <p>Cheesy Galore Stuffed Crust</p>
+                        <a href="#order" class="btn">order now</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="images/g-7.jpg" alt=""></img>
+                    <div class="content">
+                        <h3>tasty Pizza</h3>
+                        <p>Veggie Garden Sausage Crust</p>
+                        <a href="#order" class="btn">order now</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="images/g-8.jpg" alt=""></img>
+                    <div class="content">
+                        <h3>tasty Pizza</h3>
+                        <p>Hawaiian Chicken Pizza Original</p>
+                        <a href="#order" class="btn">order now</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="images/g-9.jpg" alt=""></img>
+                    <div class="content">
+                        <h3>Cold Ice-Cream</h3>
+                        <p>Classic Vanilla Gelato</p>
+                        <a href="#order" class="btn">order now</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="images/g-10.jpg" alt=""></img>
+                    <div class="content">
+                        <h3>Cold Ice-Cream</h3>
+                        <p>Limoncello Gelato</p>
+                        <a href="#order" class="btn">order now</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="images/g-11.jpg" alt=""></img>
+                    <div class="content">
+                        <h3>Cold Ice-Cream</h3>
+                        <p>Strawberry Cheese Gelato</p>
+                        <a href="#order" class="btn">order now</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="images/g-12.jpg" alt=""></img>
+                    <div class="content">
+                        <h3>Cold Ice-Cream</h3>
+                        <p>Chocolate Gelato</p>
+                        <a href="#order" class="btn">order now</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="images/g-13.jpg" alt=""></img>
+                    <div class="content">
+                        <h3>Drinks</h3>
+                        <p>Cappuccino</p>
+                        <a href="#order" class="btn">order now</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="images/g-14.jpg" alt=""></img>
+                    <div class="content">
+                        <h3>Drinks</h3>
+                        <p>Latte</p>
+                        <a href="#order" class="btn">order now</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="images/g-15.jpg" alt=""></img>
+                    <div class="content">
+                        <h3>Drinks</h3>
+                        <p>Smoothie Manggo</p>
+                        <a href="#order" class="btn">order now</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="images/g-16.jpg" alt=""></img>
+                    <div class="content">
+                        <h3>Drinks</h3>
+                        <p>Tea</p>
+                        <a href="#order" class="btn">order now</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="images/g-17.jpg" alt=""></img>
+                    <div class="content">
+                        <h3>Tasty Cakes</h3>
+                        <p>Choc Almond Donuts</p>
+                        <a href="#order" class="btn">order now</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="images/g-18.jpg" alt=""></img>
+                    <div class="content">
+                        <h3>Tasty Cakes</h3>
+                        <p>Black Forest Brownies</p>
+                        <a href="#order" class="btn">order now</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="images/g-19.jpg" alt=""></img>
+                    <div class="content">
+                        <h3>Tasty Cakes</h3>
+                        <p>Oreo Buterscotch Donuts</p>
+                        <a href="#order" class="btn">order now</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="images/g-20.jpg" alt=""></img>
+                    <div class="content">
+                        <h3>Tasty Cakes</h3>
+                        <p>Cookies Monster Cupcake</p>
+                        <a href="#order" class="btn">order now</a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        
+        <section class="order" id="order">
+
+            <h1 class="heading"> <span>order</span> now </h1>
+
+            <div class="row">
+
+                <div class="image">
+                    <img src="images/order-img.jpg" alt=""></img>
+                </div>
+
+                <form action="">
+
+                    <div class="inputBox">
+                        <input type="text" placeholder="name"></input>
+                        <input type="email" placeholder="email"></input>
+                    </div>
+
+                    <div class="inputBox">
+                        <input type="number" placeholder="number"></input>
+                        <input type="text" placeholder="food name"></input>
+                    </div>
+
+                    <textarea placeholder="address" name="" id="" cols="30" rows="10"></textarea>
+
+                    <input type="submit" value="order now" class="btn"></input>
+
+                </form>
+
+            </div>
+
+        </section>
+        
+        <section class="footer">
+
+            <div class="share">
+                <a href="#" class="btn">Facebook</a>
+                <a href="#" class="btn">Twitter</a>
+                <a href="#" class="btn">Instagram</a>
+                <a href="#" class="btn">WhatsApp</a>
+            </div>
+
+        </section>
+        
+        <a href="#home" class="fas fa-angle-up" id="scroll-top"></a>
+        
     </h:body>
 </html>
 
