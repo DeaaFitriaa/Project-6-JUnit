@@ -3,10 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/D:/Dev/Learn/LoveAppetiteHibernate/src/java/dao/TransactionsDao.java</file>
+            <file>file:/D:/Dev/Learn/LoveAppetiteHibernate/src/java/dao/CategoriesDao.java</file>
             <file>file:/D:/Dev/Learn/LoveAppetiteHibernate/src/java/hibernate.reveng.xml</file>
+            <file>file:/D:/Dev/Learn/LoveAppetiteHibernate/src/java/hibernate.cfg.xml</file>
             <file>file:/D:/Dev/Learn/LoveAppetiteHibernate/web/index.xhtml</file>
+            <file>file:/D:/Dev/Learn/LoveAppetiteHibernate/src/java/dao/PaymentsDao.java</file>
+            <file>file:/D:/Dev/Learn/LoveAppetiteHibernate/src/java/bean/pojo/Users.java</file>
             <file>file:/D:/Dev/Learn/LoveAppetiteHibernate/web/index.html</file>
-            <file>file:/D:/Dev/Learn/LoveAppetiteHibernate/src/java/config/HibernateUtil.java</file>
+            <file>file:/D:/Dev/Learn/LoveAppetiteHibernate/src/java/dao/UsersDao.java</file>
+            <file>file:/D:/Dev/Learn/LoveAppetiteHibernate/src/java/dao/ProductsDao.java</file>
+            <file>file:/D:/Dev/Learn/LoveAppetiteHibernate/src/java/bean/pojo/Transactions.java</file>
             <file>file:/D:/Dev/Learn/LoveAppetiteHibernate/src/java/dao/BaseDao.java</file>
         </group>
     </open-files>
