@@ -29,8 +29,7 @@ public class TransactionsDao extends BaseDao {
             trans = session.beginTransaction();
             
             Criteria criteria = session.createCriteria(Transactions.class);
-            criteria.setFetchMode("users", FetchMode.JOIN);
-            criteria.add(Restrictions.eq("users.id", userId));
+            criteria.setFetchMode("users", FetchMode.JOIN).add(Restrictions.eq("users.id", userId));
             criteria.setFetchMode("products", FetchMode.JOIN);
             criteria.setFetchMode("payments", FetchMode.JOIN);
             
