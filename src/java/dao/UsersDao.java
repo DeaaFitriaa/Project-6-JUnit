@@ -43,6 +43,12 @@ public class UsersDao extends BaseDao {
         return Users.class.cast(super.getById(Users.class, id));
     }
     
+    public void logout() {
+        session.flush();
+        session.clear();
+        session = hibernateUtil.openSession();
+    }
+    
     public static void main(String[] args) {
         UsersDao dao = new UsersDao();
 //        Users user = dao.login("admin@gmail.com", "321");

@@ -113,6 +113,25 @@ public class BaseDao {
         return data;
     }
     
+    public Object getByProperty(Class pojo, String property, Object value) {
+        session = hibernateUtil.openSession();
+        try {
+            trans = session.beginTransaction();
+            
+            Criteria criteria = session.createCriteria(pojo).add(Restrictions.eq(property, value));
+            data = criteria.uniqueResult();
+            
+            trans.commit();
+        }
+        catch(HibernateException e) {
+            e.getMessage();
+        }
+        finally {
+            session.close();
+        }
+        return data;
+    }
+    
     public boolean update(Object pojo){
         session = hibernateUtil.openSession();
         trans = null;

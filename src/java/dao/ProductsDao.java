@@ -5,10 +5,16 @@
  */
 package dao;
 
+import bean.pojo.Products;
+
 /**
  *
  * @author Dea Fitria
  */
-public class ProductsDao {
+public class ProductsDao extends BaseDao {
+    
+    public Products getByProperty(String property, Object value) {
+        return Products.class.cast(super.getByProperty(Products.class, property, value));
+    }
     
 }

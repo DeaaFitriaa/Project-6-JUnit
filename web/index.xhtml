@@ -16,16 +16,21 @@
         <link rel="stylesheet" href="css/style.css"></link>
     </h:head>
     <h:body>
-        <b:navBar brand="LoveAppetite" brandHref="#" inverse="true">
-            <b:navbarLinks>
-                <b:navLink value="Home" href="#"></b:navLink>
-                <b:navLink value="Speciality" href="#"></b:navLink>
-                <b:navLink value="Popular" href="#"></b:navLink>
-                <b:navLink value="Gallery" href="#"></b:navLink>
-                <b:navLink value="Review" href="#"></b:navLink>
-                <b:navLink value="Order" href="#"></b:navLink>
-            </b:navbarLinks>
-        </b:navBar>
+        <h:form>
+            <b:navBar brand="LoveAppetite" brandHref="#" inverse="true">
+                <b:navbarLinks>
+                    <b:navLink value="Home" href="#"></b:navLink>
+                    <b:navLink value="Speciality" href="#"></b:navLink>
+                    <b:navLink value="Popular" href="#"></b:navLink>
+                    <b:navLink value="Gallery" href="#"></b:navLink>
+                    <b:navLink value="Review" href="#"></b:navLink>
+                    <b:navLink value="Order" href="#"></b:navLink>
+                    <b:navLink rendered="#{users.logoutStatus}" value="Login" href="login.xhtml"></b:navLink>
+                    <h:inputHidden rendered="#{users.loginStatus}" value="#{users.id}"></h:inputHidden>
+                    <b:navLink rendered="#{users.loginStatus}" value="Profile" href="profile.xhtml?id=#{users.id}"></b:navLink>
+                </b:navbarLinks>
+            </b:navBar>
+        </h:form>
         
         <section class="home" id="home">
 
@@ -363,23 +368,44 @@
                     <img src="images/order-img.jpg" alt=""></img>
                 </div>
 
-                <form action="">
 
+                <h:form>
+                    <h:inputHidden value="#{users.id}"></h:inputHidden>
                     <div class="inputBox">
-                        <input type="text" placeholder="name"></input>
-                        <input type="email" placeholder="email"></input>
+                        <h:outputLabel for="name" value="Name"></h:outputLabel>
+                        <h:outputLabel for="email" value="Email"></h:outputLabel>
                     </div>
-
                     <div class="inputBox">
-                        <input type="number" placeholder="number"></input>
-                        <input type="text" placeholder="food name"></input>
+                        <h:inputText value="#{users.name}" id="name" required="true"></h:inputText>
+                        <h:inputText value="#{users.email}" id="email" required="true"></h:inputText>
                     </div>
-
-                    <textarea placeholder="address" name="" id="" cols="30" rows="10"></textarea>
-
-                    <input type="submit" value="order now" class="btn"></input>
-
-                </form>
+                    <div class="inputBox">
+                        <h:outputLabel for="phone-number" value="Phone Number"></h:outputLabel>
+                        <h:outputLabel for="product-name" value="Product Name"></h:outputLabel>
+                    </div>
+                    <div class="inputBox">
+                        <h:inputText value="#{users.phoneNumber}" id="phone-number" required="true"></h:inputText>
+                        <h:inputText value="#{transactions.productName}" id="product-name" required="true"></h:inputText>
+                    </div>
+                    <div class="inputBox">
+                        <h:outputLabel for="address" value="Address"></h:outputLabel>
+                        <h:outputLabel for="payment" value="Payment"></h:outputLabel>
+                    </div>
+                    <div class="inputBox">
+                        <h:inputTextarea value="#{users.address}" id="address" required="true"></h:inputTextarea>
+                        <h:selectOneListbox value="#{transactions.paymentId}" id="payment">
+                            <f:selectItem itemLabel="Gopay" itemValue="1"/> 
+                            <f:selectItem itemLabel="Shopeepay" itemValue="2"/> 
+                            <f:selectItem itemLabel="OVO" itemValue="3"/> 
+                            <f:selectItem itemLabel="BRIVA" itemValue="4"/> 
+                            <f:selectItem itemLabel="BCA Virtual Account" itemValue="5"/> 
+                            <f:selectItem itemLabel="BNI Virtual Account" itemValue="6"/> 
+                            <f:selectItem itemLabel="DANA" itemValue="7"/> 
+                            <f:selectItem itemLabel="Cash On Delivery" itemValue="8"/> 
+                        </h:selectOneListbox>
+                    </div>
+                    <h:commandButton class="btn btn-primary" action="#{transactions.create(users)}" value="Order Now!"></h:commandButton>
+                </h:form>
 
             </div>
 

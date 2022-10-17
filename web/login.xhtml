@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <meta charset="UTF-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+        <title>Login To Love Appetite</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+        <link rel="stylesheet" href="css/style.css"></link>
+    </h:head>
+    <h:body>
+        <section class="order" id="order">
+
+            <h1 class="heading"> <span>login</span> now </h1>
+
+            <div class="row">
+
+                <div class="image">
+                    <img src="images/order-img.jpg" alt=""></img>
+                </div>
+
+                <h:form>
+
+                    <div class="inputBox">
+                        <h:outputLabel for="email" value="Email"></h:outputLabel>
+                        <h:outputLabel for="password" value="Password"></h:outputLabel>
+                    </div>
+                    
+                    <div class="inputBox">
+                        <h:inputText value="#{users.email}" required="true" id="email"></h:inputText>
+                        <h:inputSecret value="#{users.password}" required="true" id="password"></h:inputSecret>
+                    </div>
+
+                    <h:commandButton action="#{users.login}" value="Login" class="btn"></h:commandButton>
+                    
+                </h:form>
+
+            </div>
+
+        </section>
+        
+        <section class="footer">
+
+            <div class="share">
+                <a href="#" class="btn">facebook</a>
+                <a href="#" class="btn">twitter</a>
+                <a href="#" class="btn">instagram</a>
+                <a href="#" class="btn">pinterest</a>
+                <a href="#" class="btn">linkedin</a>
+            </div>
+
+
+
+        </section>
+
+        <a href="#home" class="fas fa-angle-up" id="scroll-top"></a>
+
+
+        <script src="js/script.js"></script>
+    </h:body>
+</html>
+
