@@ -44,14 +44,11 @@ public class UsersDaoTest {
     @Test
     public void testLogin() {
         System.out.println("login");
-        String email = "";
-        String password = "";
+        String email = "admin@gmail.com";
+        String password = "123";
         UsersDao instance = new UsersDao();
-        Users expResult = null;
         Users result = instance.login(email, password);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertFalse(result.getName().equals("") || result.getName() == null);
     }
 
     /**
@@ -60,37 +57,10 @@ public class UsersDaoTest {
     @Test
     public void testGetById() {
         System.out.println("getById");
-        int id = 0;
+        int id = 1;
         UsersDao instance = new UsersDao();
-        Users expResult = null;
         Users result = instance.getById(id);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of logout method, of class UsersDao.
-     */
-    @Test
-    public void testLogout() {
-        System.out.println("logout");
-        UsersDao instance = new UsersDao();
-        instance.logout();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of main method, of class UsersDao.
-     */
-    @Test
-    public void testMain() {
-        System.out.println("main");
-        String[] args = null;
-        UsersDao.main(args);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertTrue(result.getName().equals("Admin"));
     }
     
 }

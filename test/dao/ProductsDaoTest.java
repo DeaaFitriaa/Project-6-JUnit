@@ -44,14 +44,12 @@ public class ProductsDaoTest {
     @Test
     public void testGetByProperty() {
         System.out.println("getByProperty");
-        String property = "";
-        Object value = null;
+        String property = "name";
+        String value = "Danish";
         ProductsDao instance = new ProductsDao();
-        Products expResult = null;
+        String expResult = "Danish Hotdogs";
         Products result = instance.getByProperty(property, value);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(expResult, result.getDescription());
     }
     
 }

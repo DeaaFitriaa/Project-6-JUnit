@@ -45,25 +45,10 @@ public class TransactionsDaoTest {
     @Test
     public void testGetHistory() {
         System.out.println("getHistory");
-        int userId = 0;
+        int userId = 1;
         TransactionsDao instance = new TransactionsDao();
-        List<Transactions> expResult = null;
+        String expResult = "Hawaiian Chicken";
         List<Transactions> result = instance.getHistory(userId);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(expResult, result.get(1).getProducts().getName());
     }
-
-    /**
-     * Test of main method, of class TransactionsDao.
-     */
-    @Test
-    public void testMain() {
-        System.out.println("main");
-        String[] args = null;
-        TransactionsDao.main(args);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-    
 }

@@ -46,18 +46,5 @@ public class UsersDao extends BaseDao {
     public void logout() {
         session.flush();
         session.clear();
-        session = hibernateUtil.openSession();
-    }
-    
-    public static void main(String[] args) {
-        UsersDao dao = new UsersDao();
-//        Users user = dao.login("admin@gmail.com", "321");
-        Users user = dao.getById(1);
-        
-        System.out.println(user);
-        System.out.println(user.getEmail());
-        System.out.println(user.getPassword());
-        System.out.println(user.getName());
-        System.out.println(user.getAddress());
     }
 }

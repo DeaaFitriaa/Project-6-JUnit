@@ -52,16 +52,4 @@ public class TransactionsDao extends BaseDao {
         
         return listTransaction;
     }
-    
-    public static void main(String[] args) {
-        TransactionsDao dao = new TransactionsDao();
-//        List<Transactions> lists = dao.getHistory(1);
-//        
-//        lists.forEach((list) -> {
-//            System.out.println(list);
-//            System.out.println(list.getProducts().getId());
-//            System.out.println(list.getPayments().getName());
-//            System.out.println(list.getName());
-//        });
-    }
 }

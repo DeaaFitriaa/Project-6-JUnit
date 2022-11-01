@@ -43,16 +43,14 @@ public class PaymentsDaoTest {
      * Test of getByProperty method, of class PaymentsDao.
      */
     @Test
-    public void testGetByProperty() {
-        System.out.println("getByProperty");
-        String property = "";
-        Object value = null;
+    public void testGetByPropertyName() {
+        System.out.println("getByProperty(name)");
+        String property = "name";
+        String value = "BRIVA";
         PaymentsDao instance = new PaymentsDao();
-        Payments expResult = null;
+        int expResult = 4;
         Payments result = instance.getByProperty(property, value);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(String.valueOf(expResult), String.valueOf(result.getId()));
     }
 
     /**
@@ -61,13 +59,11 @@ public class PaymentsDaoTest {
     @Test
     public void testGetById() {
         System.out.println("getById");
-        int id = 0;
+        int id = 3;
         PaymentsDao instance = new PaymentsDao();
-        Payments expResult = null;
+        String expResult = "OVO";
         Payments result = instance.getById(id);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(expResult, result.getName());
     }
 
     /**
@@ -77,11 +73,8 @@ public class PaymentsDaoTest {
     public void testGetAll() {
         System.out.println("getAll");
         PaymentsDao instance = new PaymentsDao();
-        List<Payments> expResult = null;
         List<Payments> result = instance.getAll();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertNotNull(result);
     }
     
 }
